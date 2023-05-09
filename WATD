@@ -1,0 +1,18 @@
+ import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] names = {"fafa", "trapz", "17nods", "goatedonthekeys", "orlanthi", "Saint", "Zach", "KingGoon", "SDF", "Terrance", "Thody"};
+        String[] activities = {"playing basketball", "reading a book", "cooking dinner", "watching TV", "doing homework", "going for a run", "writing a poem", "playing video games", "listening to music", "gardening", "painting a picture", "meditating", "talking on the phone", "practicing yoga", "cleaning the house", "shopping for groceries", "taking a nap", "coding a program", "playing an instrument", "dancing"};
+        Random rand = new Random();
+        System.out.print("Enter a name from the list: ");
+        String name = scanner.nextLine();
+        if (Arrays.asList(names).contains(name)) {
+            String activity = activities[rand.nextInt(activities.length)];
+            System.out.println(name + " is " + activity + ".");
+        } else {
+            System.out.println("That name is not in the list.");
+        }
+    }
+}
